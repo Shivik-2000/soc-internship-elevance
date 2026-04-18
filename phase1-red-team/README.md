@@ -18,15 +18,7 @@ nmap -sV -sC -O 172.16.207.4
 
 **Result:** Discovered Apache 2.4.58 on port 80, SSH on port 22, Linux OS fingerprint.
 
-![Nmap Scan](screenshots/01_nmap<img width="2000" height="1250" alt="07_exfiltration_download" src="https://github.com/user-attachments/assets/08ed92e2-7ab1-4300-8feb-1478f35491db" />
-<img width="2000" height="1190" alt="06_exfiltration_server" src="https://github.com/user-attachments/assets/9ab2a22b-66b5-45f3-a15d-91e7c487bd67" />
-<img width="2000" height="1189" alt="05_backdoor_persistence" src="https://github.com/user-attachments/assets/4b98e5db-8ffa-4ce0-a5b1-a39ee784ce07" />
-<img width="2000" height="1246" alt="04_privilege_escalation" src="https://github.com/user-attachments/assets/5a1882e1-ba7f-4599-a805-e5fb4e4fc358" />
-<img width="2000" height="1250" alt="03_ssh_initial_access" src="https://github.com/user-attachments/assets/25b0f77a-03eb-45c8-b5a8-90e653a76933" />
-<img width="2000" height="703" alt="02_hydra_bruteforce" src="https://github.com/user-attachments/assets/14388f92-d625-4209-ac54-a3cc25d06a51" />
-<img width="1428" height="866" alt="01_nmap_recon" src="https://github.com/user-attachments/assets/00158466-c3a4-46ef-8c5e-efada9153284" />
-
-_recon.png)
+![Nmap Scan](screenshots/01_nmap_recon.png)
 
 ---
 
