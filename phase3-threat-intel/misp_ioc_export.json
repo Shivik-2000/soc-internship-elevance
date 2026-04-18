@@ -1,0 +1,143 @@
+{
+  "Event": {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "info": "APT Attack Simulation — Multi-Stage Attack IoCs",
+    "threat_level_id": "1",
+    "analysis": "2",
+    "date": "2026-04-05",
+    "published": true,
+    "Orgc": {
+      "name": "Elevance Skills Technology Pvt. Ltd.",
+      "uuid": "b2c3d4e5-f6a7-8901-bcde-f12345678901"
+    },
+    "Tag": [
+      { "name": "tlp:white" },
+      { "name": "misp-galaxy:mitre-attack-pattern=\"Brute Force - T1110\"" },
+      { "name": "misp-galaxy:mitre-attack-pattern=\"Create Account - T1136\"" },
+      { "name": "misp-galaxy:mitre-attack-pattern=\"Exfiltration Over Alternative Protocol - T1048\"" },
+      { "name": "APT-simulation" },
+      { "name": "internship-dfir" }
+    ],
+    "Attribute": [
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789001",
+        "type": "ip-src",
+        "category": "Network activity",
+        "value": "172.16.207.3",
+        "comment": "Kali Linux attacker IP — source of brute-force and reconnaissance",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1110" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789002",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "value": "172.16.207.4",
+        "comment": "Ubuntu victim IP — target of APT attack chain",
+        "to_ids": false
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789003",
+        "type": "port",
+        "category": "Network activity",
+        "value": "8888",
+        "comment": "Non-standard HTTP port used for data exfiltration server",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1048" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789004",
+        "type": "port",
+        "category": "Network activity",
+        "value": "22",
+        "comment": "SSH port targeted by Hydra brute-force attack",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1110.001" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789005",
+        "type": "text",
+        "category": "Payload delivery",
+        "value": "admin:admin123",
+        "comment": "Cracked SSH credentials — username:password",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1078" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789006",
+        "type": "target-user",
+        "category": "Targeting data",
+        "value": "backdoor",
+        "comment": "Backdoor account created by attacker for persistence (uid=1002)",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1136.001" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789007",
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "value": "stolen_data.tar.gz",
+        "comment": "Archive containing exfiltrated /etc/passwd, /etc/shadow, credentials.txt",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1560" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789008",
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "value": "credentials.txt",
+        "comment": "Simulated credentials file created by attacker containing DB_PASSWORD",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1005" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789009",
+        "type": "text",
+        "category": "External analysis",
+        "value": "backdoor ALL=(ALL) NOPASSWD:ALL",
+        "comment": "Sudoers entry added by attacker for persistent root access",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1548.003" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789010",
+        "type": "hostname",
+        "category": "Network activity",
+        "value": "ubuntu-victim",
+        "comment": "Victim hostname — Ubuntu Server 24.04 LTS",
+        "to_ids": false
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789011",
+        "type": "text",
+        "category": "External analysis",
+        "value": "python3 -m http.server 8888",
+        "comment": "Command used to start exfiltration HTTP server on victim",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1048" }]
+      },
+      {
+        "uuid": "c1d2e3f4-a5b6-7890-cdef-123456789012",
+        "type": "text",
+        "category": "External analysis",
+        "value": "hydra -l admin -P passwords.txt ssh://172.16.207.4 -t 4",
+        "comment": "Hydra brute-force command used to crack SSH credentials",
+        "to_ids": true,
+        "Tag": [{ "name": "mitre-attack:T1110.001" }]
+      }
+    ],
+    "Galaxy": [
+      {
+        "name": "MITRE ATT&CK",
+        "GalaxyCluster": [
+          { "value": "Brute Force - T1110", "description": "SSH credential brute-force using Hydra" },
+          { "value": "Valid Accounts - T1078", "description": "Using cracked admin credentials for initial access" },
+          { "value": "Sudo and Sudo Caching - T1548.003", "description": "Sudo abuse for privilege escalation to root" },
+          { "value": "Create Local Account - T1136.001", "description": "Backdoor account created for persistence" },
+          { "value": "Exfiltration Over Alternative Protocol - T1048", "description": "Data exfiltration via HTTP on port 8888" },
+          { "value": "Data from Local System - T1005", "description": "Collection of /etc/passwd and /etc/shadow" }
+        ]
+      }
+    ]
+  }
+}
