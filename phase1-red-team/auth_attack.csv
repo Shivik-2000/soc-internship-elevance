@@ -1,0 +1,105 @@
+timestamp,hostname,process,pid,message
+2026-04-04T15:55:54.992537+00:00,ubuntu-victim,passwd,1063,password for 'victim' changed by 'root'
+2026-04-04T15:55:55.038348+00:00,ubuntu-victim,systemd-logind,1098,New seat seat0.
+2026-04-04T15:55:55.038358+00:00,ubuntu-victim,systemd-logind,1098,Watching system buttons on /dev/input/event0 (Power Button)
+2026-04-04T15:55:55.038369+00:00,ubuntu-victim,systemd-logind,1098,Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+2026-04-04T15:55:55.341714+00:00,ubuntu-victim,polkitd,1086,Loading rules from directory /etc/polkit-1/rules.d
+2026-04-04T15:55:55.343425+00:00,ubuntu-victim,polkitd,1086,Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-04T15:55:55.397452+00:00,ubuntu-victim,polkitd,1086,"Finished loading, compiling and executing 6 rules"
+2026-04-04T15:55:55.408340+00:00,ubuntu-victim,polkitd,1086,Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-04T11:25:15.675574+00:00,ubuntu-victim,CRON,1801,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T11:25:15.686543+00:00,ubuntu-victim,CRON,1801,pam_unix(cron:session): session closed for user root
+2026-04-04T11:39:30.275530+00:00,ubuntu-victim,agetty,1222,tty1: invalid character 0x1b in login name
+2026-04-04T11:39:59.911946+00:00,ubuntu-victim,login,2244,PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-04-04T11:39:59.914300+00:00,ubuntu-victim,login,2244,PAM adding faulty module: pam_lastlog.so
+2026-04-04T11:40:11.230555+00:00,ubuntu-victim,login,2244,pam_unix(login:auth): check pass; user unknown
+2026-04-04T11:40:11.232828+00:00,ubuntu-victim,login,2244,pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+2026-04-04T11:40:13.391831+00:00,ubuntu-victim,login,2244,"FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure"
+2026-04-04T11:40:25.692456+00:00,ubuntu-victim,login,2244,pam_unix(login:session): session opened for user victim(uid=1000) by LOGIN(uid=0)
+2026-04-04T11:40:25.799155+00:00,ubuntu-victim,systemd-logind,1098,New session 2 of user victim.
+2026-04-04T11:45:01.981058+00:00,ubuntu-victim,CRON,2405,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T11:45:01.988254+00:00,ubuntu-victim,CRON,2405,pam_unix(cron:session): session closed for user root
+2026-04-04T11:45:30.398758+00:00,ubuntu-victim,systemd-logind,1098,The system will power off now!
+2026-04-04T11:45:30.517355+00:00,ubuntu-victim,systemd-logind,1098,System is powering down.
+2026-04-04T17:16:14.662751+00:00,ubuntu-victim,systemd-logind,867,New seat seat0.
+2026-04-04T17:16:14.662760+00:00,ubuntu-victim,systemd-logind,867,Watching system buttons on /dev/input/event0 (Power Button)
+2026-04-04T17:16:14.662766+00:00,ubuntu-victim,systemd-logind,867,Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+2026-04-04T17:16:14.663075+00:00,ubuntu-victim,polkitd,812,Loading rules from directory /etc/polkit-1/rules.d
+2026-04-04T17:16:14.663082+00:00,ubuntu-victim,polkitd,812,Loading rules from directory /usr/share/polkit-1/rules.d
+2026-04-04T17:16:14.663088+00:00,ubuntu-victim,polkitd,812,"Finished loading, compiling and executing 6 rules"
+2026-04-04T17:16:14.663102+00:00,ubuntu-victim,polkitd,812,Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-04-04T17:16:28.896771+00:00,ubuntu-victim,login,1116,PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-04-04T17:16:28.896885+00:00,ubuntu-victim,login,1116,PAM adding faulty module: pam_lastlog.so
+2026-04-04T17:16:37.412167+00:00,ubuntu-victim,login,1116,pam_unix(login:session): session opened for user victim(uid=1000) by victim(uid=0)
+2026-04-04T17:16:37.469677+00:00,ubuntu-victim,systemd-logind,867,New session 1 of user victim.
+2026-04-04T11:48:04.663578+00:00,ubuntu-victim,groupadd,1596,"group added to /etc/group: name=ssl-cert, GID=110"
+2026-04-04T11:48:04.666980+00:00,ubuntu-victim,groupadd,1596,group added to /etc/gshadow: name=ssl-cert
+2026-04-04T11:48:04.670619+00:00,ubuntu-victim,groupadd,1596,"new group: name=ssl-cert, GID=110"
+2026-04-04T11:49:37.959337+00:00,ubuntu-victim,groupadd,2371,"group added to /etc/group: name=ftp, GID=111"
+2026-04-04T11:49:37.961907+00:00,ubuntu-victim,groupadd,2371,group added to /etc/gshadow: name=ftp
+2026-04-04T11:49:37.965373+00:00,ubuntu-victim,groupadd,2371,"new group: name=ftp, GID=111"
+2026-04-04T11:49:37.993305+00:00,ubuntu-victim,useradd,2378,"new user: name=ftp, UID=110, GID=111, home=/srv/ftp, shell=/usr/sbin/nologin, from=none"
+2026-04-04T11:49:38.027790+00:00,ubuntu-victim,chfn,2385,changed user 'ftp' information
+2026-04-04T11:55:01.846437+00:00,ubuntu-victim,CRON,2512,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T11:55:01.854294+00:00,ubuntu-victim,CRON,2512,pam_unix(cron:session): session closed for user root
+2026-04-04T11:59:30.739582+00:00,ubuntu-victim,useradd,2522,"new group: name=admin, GID=1001"
+2026-04-04T11:59:30.741734+00:00,ubuntu-victim,useradd,2522,"new user: name=admin, UID=1001, GID=1001, home=/home/admin, shell=/bin/bash, from=/dev/pts/0"
+2026-04-04T12:00:11.335092+00:00,ubuntu-victim,chpasswd,2533,pam_unix(chpasswd:chauthtok): password changed for admin
+2026-04-04T12:00:32.921061+00:00,ubuntu-victim,usermod,2538,add 'admin' to group 'sudo'
+2026-04-04T12:00:32.921273+00:00,ubuntu-victim,usermod,2538,add 'admin' to shadow group 'sudo'
+2026-04-04T12:05:01.866745+00:00,ubuntu-victim,CRON,2556,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T12:05:01.878060+00:00,ubuntu-victim,CRON,2556,pam_unix(cron:session): session closed for user root
+2026-04-04T12:12:44.686595+00:00,ubuntu-victim,sshd,2745,Server listening on 0.0.0.0 port 22.
+2026-04-04T12:12:44.688394+00:00,ubuntu-victim,sshd,2745,Server listening on :: port 22.
+2026-04-04T12:15:01.995865+00:00,ubuntu-victim,CRON,2758,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T12:15:02.016471+00:00,ubuntu-victim,CRON,2758,pam_unix(cron:session): session closed for user root
+2026-04-04T12:17:01.115451+00:00,ubuntu-victim,CRON,2764,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T12:17:01.139876+00:00,ubuntu-victim,CRON,2764,pam_unix(cron:session): session closed for user root
+2026-04-04T12:18:00.602030+00:00,ubuntu-victim,sshd,2768,Connection closed by 172.16.207.3 port 35566
+2026-04-04T12:18:07.966810+00:00,ubuntu-victim,sshd,2771,error: Protocol major versions differ: 2 vs. 1
+2026-04-04T12:18:07.967307+00:00,ubuntu-victim,sshd,2771,banner exchange: Connection from 172.16.207.3 port 44598: could not read protocol version
+2026-04-04T12:18:07.967842+00:00,ubuntu-victim,sshd,2774,error: Protocol major versions differ: 2 vs. 1
+2026-04-04T12:18:07.968157+00:00,ubuntu-victim,sshd,2774,banner exchange: Connection from 172.16.207.3 port 44602: could not read protocol version
+2026-04-04T12:18:08.159199+00:00,ubuntu-victim,sshd,2780,Unable to negotiate with 172.16.207.3 port 44614: no matching host key type found. Their offer: ssh-dss [preauth]
+2026-04-04T12:18:08.426801+00:00,ubuntu-victim,sshd,2782,Unable to negotiate with 172.16.207.3 port 44624: no matching host key type found. Their offer: ssh-rsa [preauth]
+2026-04-04T12:18:08.897349+00:00,ubuntu-victim,sshd,2784,Connection closed by 172.16.207.3 port 44630 [preauth]
+2026-04-04T12:18:09.051456+00:00,ubuntu-victim,sshd,2786,Unable to negotiate with 172.16.207.3 port 44638: no matching host key type found. Their offer: ecdsa-sha2-nistp384 [preauth]
+2026-04-04T12:18:09.310834+00:00,ubuntu-victim,sshd,2788,Unable to negotiate with 172.16.207.3 port 44654: no matching host key type found. Their offer: ecdsa-sha2-nistp521 [preauth]
+2026-04-04T12:18:09.781622+00:00,ubuntu-victim,sshd,2790,Connection closed by 172.16.207.3 port 44670 [preauth]
+2026-04-04T12:21:08.166477+00:00,ubuntu-victim,sshd,2801,Received disconnect from 172.16.207.3 port 60188:11: Bye Bye [preauth]
+2026-04-04T12:21:08.166749+00:00,ubuntu-victim,sshd,2801,Disconnected from authenticating user admin 172.16.207.3 port 60188 [preauth]
+2026-04-04T12:21:08.636455+00:00,ubuntu-victim,sshd,2803,pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.207.3  user=admin
+2026-04-04T12:21:08.658289+00:00,ubuntu-victim,sshd,2804,Accepted password for admin from 172.16.207.3 port 60206 ssh2
+2026-04-04T12:21:08.664089+00:00,ubuntu-victim,sshd,2804,pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2026-04-04T12:21:08.684603+00:00,ubuntu-victim,sshd,2806,pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.207.3  user=admin
+2026-04-04T12:21:08.685353+00:00,ubuntu-victim,sshd,2805,pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.207.3  user=admin
+2026-04-04T12:21:08.691305+00:00,ubuntu-victim,systemd-logind,867,New session 7 of user admin.
+2026-04-04T12:21:09.959305+00:00,ubuntu-victim,sshd,2804,pam_unix(sshd:session): session closed for user admin
+2026-04-04T12:21:09.968914+00:00,ubuntu-victim,systemd-logind,867,Session 7 logged out. Waiting for processes to exit.
+2026-04-04T12:21:09.971777+00:00,ubuntu-victim,systemd-logind,867,Removed session 7.
+2026-04-04T12:21:10.690740+00:00,ubuntu-victim,sshd,2803,Failed password for admin from 172.16.207.3 port 60198 ssh2
+2026-04-04T12:21:10.739167+00:00,ubuntu-victim,sshd,2806,Failed password for admin from 172.16.207.3 port 60222 ssh2
+2026-04-04T12:21:10.740652+00:00,ubuntu-victim,sshd,2805,Failed password for admin from 172.16.207.3 port 60208 ssh2
+2026-04-04T12:21:10.816282+00:00,ubuntu-victim,sshd,2803,Connection closed by authenticating user admin 172.16.207.3 port 60198 [preauth]
+2026-04-04T12:21:10.867220+00:00,ubuntu-victim,sshd,2805,Connection closed by authenticating user admin 172.16.207.3 port 60208 [preauth]
+2026-04-04T12:21:10.874416+00:00,ubuntu-victim,sshd,2806,Connection closed by authenticating user admin 172.16.207.3 port 60222 [preauth]
+2026-04-04T12:23:09.709828+00:00,ubuntu-victim,sshd,2931,Accepted password for admin from 172.16.207.3 port 40708 ssh2
+2026-04-04T12:23:09.713525+00:00,ubuntu-victim,sshd,2931,pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2026-04-04T12:23:09.729296+00:00,ubuntu-victim,systemd-logind,867,New session 9 of user admin.
+2026-04-04T12:24:32.813260+00:00,ubuntu-victim,su,3017,(to root) root on pts/1
+2026-04-04T12:24:32.815475+00:00,ubuntu-victim,su,3017,pam_unix(su:session): session opened for user root(uid=0) by admin(uid=0)
+2026-04-04T12:25:01.239762+00:00,ubuntu-victim,CRON,3028,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T12:25:01.250627+00:00,ubuntu-victim,CRON,3028,pam_unix(cron:session): session closed for user root
+2026-04-04T12:27:09.841991+00:00,ubuntu-victim,chpasswd,3043,"pam_unix(chpasswd:chauthtok): user ""backdoor"" does not exist in /etc/passwd"
+2026-04-04T12:27:43.158810+00:00,ubuntu-victim,useradd,3046,"new group: name=backdoor, GID=1002"
+2026-04-04T12:27:43.163772+00:00,ubuntu-victim,useradd,3046,"new user: name=backdoor, UID=1002, GID=1002, home=/home/backdoor, shell=/bin/bash, from=/dev/pts/1"
+2026-04-04T12:28:02.141510+00:00,ubuntu-victim,chpasswd,3055,pam_unix(chpasswd:chauthtok): password changed for backdoor
+2026-04-04T12:28:20.869873+00:00,ubuntu-victim,usermod,3060,add 'backdoor' to group 'sudo'
+2026-04-04T12:28:20.872572+00:00,ubuntu-victim,usermod,3060,add 'backdoor' to shadow group 'sudo'
+2026-04-04T12:35:01.262672+00:00,ubuntu-victim,CRON,3099,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-04T12:35:01.277093+00:00,ubuntu-victim,CRON,3099,pam_unix(cron:session): session closed for user root
+2026-04-05T05:44:23.701648+00:00,ubuntu-victim,sshd,3686,Accepted password for admin from 172.16.207.3 port 56202 ssh2
+2026-04-05T05:44:23.715104+00:00,ubuntu-victim,sshd,3686,pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2026-04-05T05:44:23.729826+00:00,ubuntu-victim,systemd-logind,867,New session 13 of user admin.
+2026-04-05T05:45:01.313698+00:00,ubuntu-victim,CRON,3794,pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-04-05T05:45:01.321412+00:00,ubuntu-victim,CRON,3794,pam_unix(cron:session): session closed for user root
