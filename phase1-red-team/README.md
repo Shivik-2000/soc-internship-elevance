@@ -18,8 +18,7 @@ nmap -sV -sC -O 172.16.207.4
 
 **Result:** Discovered Apache 2.4.58 on port 80, SSH on port 22, Linux OS fingerprint.
 
-![Nmap Scan](screenshots/01_nmap_recon.png)
-
+![Nmap Scan](01_nmap_recon.png)
 ---
 
 ## Step 2 — Brute-Force SSH (T1110.001)
