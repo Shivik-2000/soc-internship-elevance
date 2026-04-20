@@ -1,20 +1,13 @@
-# Brute Force Attack Detection
+## Screenshots
 
-## Overview
-This folder contains screenshots and evidence of Brute Force attack 
-detection using the custom SIEM Dashboard built on ELK Stack (Kibana).
+**Failed Logins Over Time + Top Attacking IPs**
 
-## What Was Detected
-- Multiple failed login attempts from a single IP
-- Authentication failure spikes visualized in Kibana
-- Alerts triggered after threshold exceeded
+![BF Dashboard Top](./BF-Dashboard-Top.png)
 
-## Dashboard Panels
-- Failed Login Attempts Over Time (Line Chart)
-- Top Source IPs (Bar Chart)
-- Geo-map of Attack Origins
+**Most Targeted Usernames + Failed vs Successful**
 
-## Tools Used
-- ELK Stack (Elasticsearch, Logstash, Kibana)
-- Winlogbeat / Filebeat for log ingestion
-- Kibana Lens for visualization
+![BF Dashboard Bottom](./BF-Dashboard-Bottom.png)
+
+**Raw Attack Events Log**
+
+![BF Raw Events](./BF-Raw-Events.png)
