@@ -63,10 +63,10 @@ Each dashboard was built by uploading realistic CSV log data to Elastic Cloud an
 ### Screenshots
 
 **Timeline + Methods Breakdown**
-![PrivEsc Top](screenshots/privilege-escalation/01_priv_esc_timeline_methods.png)
+![PrivEsc Top](privilege-escalation/01_priv_esc_timeline_methods.png)
 
 **Most Targeted Hosts + Success Rate**
-![PrivEsc Bottom](screenshots/privilege-escalation/02_priv_esc_hosts_pie.png)
+![PrivEsc Bottom](privilege-escalation/02_priv_esc_hosts_pie.png)
 
 ### Key Findings
 - 70% escalation success rate — critical misconfiguration
