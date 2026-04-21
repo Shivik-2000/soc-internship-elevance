@@ -92,7 +92,7 @@ Each dashboard was built by uploading realistic CSV log data to Elastic Cloud an
 ### Screenshots
 
 **Top Source IPs + Success Rate**
-![Exfil Dashboard](screenshots/exfiltration/01_exfil_channels_success.png)
+![Exfil Dashboard](exfiltration/01_exfil_channels_success.png)
 
 ### Key Findings
 - 76.67% exfiltration success — active data breach
