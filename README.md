@@ -1,38 +1,31 @@
 # SOC Internship — Elevance Skills Technology 🛡️
 
-> Multi-phase APT attack simulation and detection project completed as part of 
-> SOC Analyst internship at Elevance Skills Technology.
-
-**Intern:** Vaishvik Kansara  
-**Organisation:** Elevance Skills Technology  
-**Duration:** March 2026 — Present  
+## 📁 Repository Structure
 
 ---
 
-## 🔴🔵🟣 Project — Multi-Stage APT Attack Simulation
+## 🔴🔵🟣 Project 1 — Multi-Stage APT Attack Simulation
 
-A complete end-to-end APT (Advanced Persistent Threat) simulation across 3 phases,
-performed on a VMware internal lab network.
-
-| Phase | Role | Status |
-|-------|------|--------|
-| [Phase 1 — Red Team](./phase1-red-team/) | Attack simulation (Kali → Ubuntu) | ✅ Complete |
-| [Phase 2 — Blue Team](./phase2-blue-team/) | Detection via Elastic Cloud SIEM | ✅ Complete |
-| [Phase 3 — Threat Intel](./phase3-threat-intel/) | YARA, Sigma rules, MISP IoC export | ✅ Complete |
+| Folder | Description | Status |
+| --- | --- | --- |
+| [phase1-red-team](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/phase1-red-team) | Attack simulation (Kali → Ubuntu) | ✅ Complete |
+| [phase2-blue-team](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/phase2-blue-team) | Detection via Elastic Cloud SIEM | ✅ Complete |
+| [phase3-threat-intel](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/phase3-threat-intel) | YARA, Sigma rules, MISP IoC export | ✅ Complete |
 
 ---
 
-## 🔧 Tools used
+## 📊 Project 2 — Custom SIEM Dashboard (ELK Stack)
 
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kalilinux&logoColor=white)
-![Elastic](https://img.shields.io/badge/Elastic_SIEM-005571?style=flat&logo=elastic&logoColor=white)
-![VMware](https://img.shields.io/badge/VMware-607078?style=flat&logo=vmware&logoColor=white)
-![MISP](https://img.shields.io/badge/MISP-ThreatIntel-blue?style=flat)
+> Designed and implemented a custom Kibana dashboard to visualize 
+> critical security events using ELK Stack.
 
-**Attack tools:** Nmap, Hydra, SSH  
-**Detection:** Elastic Cloud (Serverless Security), Kibana, KQL  
-**Threat Intel:** YARA, Sigma, MISP  
+| Attack Type | Folder | Description | Status |
+| --- | --- | --- | --- |
+| 🔴 Brute Force | [brute-force](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/SIEM-Dashboard/brute-force) | Failed login spikes, top attacking IPs, targeted usernames | ✅ Complete |
+| 🟡 Privilege Escalation | [privilege-escalation](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/SIEM-Dashboard/privilege-escalation) | Unauthorized role changes, suspicious admin access | ✅ Complete |
+| 🟣 Exfiltration Attempts | [exfiltration](https://github.com/Shivik-2000/soc-internship-elevance/blob/main/SIEM-Dashboard/exfiltration) | Unusual outbound traffic, large transfers, DNS exfiltration | ✅ Complete |
 
----
-
-## 📁 Repository structure
+### 🧰 Tools Used
+- **ELK Stack** — Elasticsearch, Logstash, Kibana
+- **Beats** — Winlogbeat, Filebeat, Packetbeat
+- **Kibana Lens** — Custom dashboard visualizations
