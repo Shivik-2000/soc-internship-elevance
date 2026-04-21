@@ -31,13 +31,13 @@ Each dashboard was built by uploading realistic CSV log data to Elastic Cloud an
 ### Screenshots
 
 **Failed Logins Over Time + Top Attacking IPs**
-![BF Dashboard Top](BF-Dashboard-Top.png)
+![BF Dashboard Top](brute-force/BF-Dashboard-Top.png)
 
 **Most Targeted Usernames + Failed vs Successful**
-![BF Dashboard Bottom](BF-Dashboard-Bottom.png)
+![BF Dashboard Bottom](brute-force/BF-Bottom-Top.png)
 
 **Raw Attack Events Log**
-![BF Raw Events](BF-Raw-Events.png)
+![BF Raw Events](brute-force/BF-Raw-Events.png)
 
 ### Key Findings
 - Coordinated brute-force campaign on April 1, 2026
