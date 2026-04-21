@@ -34,7 +34,8 @@ Each dashboard was built by uploading realistic CSV log data to Elastic Cloud an
 ![BF Dashboard Top](brute-force/BF-Dashboard-Top.png)
 
 **Most Targeted Usernames + Failed vs Successful**
-![BF Dashboard Bottom](brute-force/BF-Bottom-Top.png)
+
+![BF Dashboard Bottom](brute-force/BF-Dashboard-Bottom.png)
 
 **Raw Attack Events Log**
 ![BF Raw Events](brute-force/BF-Raw-Events.png)
